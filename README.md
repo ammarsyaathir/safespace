@@ -31,7 +31,35 @@ The main page (`/` or `/home`) combines the global master layout ([`views/layout
 
 ---
 
-## 2. Project Architecture (Separation of Concerns)
+## 2. All Portal Pages Showcase
+
+### Understand Abuse (`/learn`)
+![Understand Abuse Page](docs/learn-page.png)
+Educates visitors on four forms of domestic abuse (**Physical abuse**, **Emotional abuse**, **Financial control**, and **Digital monitoring**) along with Malaysian legal protections under the Domestic Violence Act 1994 (Act 521), Emergency Protection Orders (EPO), and Interim Protection Orders (IPO).
+
+### Private Check-in (`/checkin`)
+![Private Check-in Page](docs/checkin-page.png)
+Interactive check-in form capturing an optional nickname, immediate-danger status, desired support category, and optional notes. On submission, client-side validation and urgency evaluation dynamically render tailored guidance into the accessible popup modal (`innerHTML`), alongside quick-dial Malaysia emergency contacts.
+
+### Support Resources (`/resources`)
+![Support Resources Page](docs/resources-page.png)
+Directory of Malaysian crisis hotlines and institutional support services including **Talian Kasih 15999**, **One Stop Crisis Centre (OSCC)**, **Legal Aid Bureau (JBG)**, **Women's Aid Organisation (WAO)**, **All Women's Action Society (AWAM)**, and the **Social Welfare Department (JKM)**.
+
+### Pause & Prepare (`/calm`)
+![Pause and Prepare Page](docs/calm-page.png)
+Features a guided 60-second **3-breath grounding orb** powered by an `async/await` animation loop with cancellation support (`Start 3 breaths` / `Stop`), paired with a practical four-item personal safety plan checklist.
+
+### Output Methods (`/methods`)
+![Output Methods Page](docs/methods-page.png)
+Interactive showcase demonstrating the four JavaScript output delivery mechanisms: `innerHTML` modal injection, `document.write()` printable emergency summary window, `window.alert()` safety dialog, and `console.log()` / `console.table()` developer diagnostics.
+
+### Staff Portal Login (`/login`)
+![Staff Portal Login Page](docs/login-page.png)
+Provides staff/advocate login authentication validated against `Password.txt` via the `/login` and `/logout` routes.
+
+---
+
+## 3. Project Architecture (Separation of Concerns)
 
 This project implements a **Model-View-Controller (MVC)** web application with separated **Router**, **Controllers**, **Views**, **CSS**, **Client-Side Scripts**, and a **Cloudflare Worker** edge adapter so it runs both locally on Node.js/Express and online on Cloudflare Workers:
 
@@ -67,7 +95,13 @@ safespace/
 ├── src/
 │   └── worker.js             <-- CLOUDFLARE WORKER: Edge router & API adapter
 ├── docs/
-│   └── main-page.png         <-- SCREENSHOT: Captured render of the live main page
+│   ├── main-page.png         <-- SCREENSHOT: Home dashboard
+│   ├── learn-page.png        <-- SCREENSHOT: Understand Abuse page
+│   ├── checkin-page.png      <-- SCREENSHOT: Private Check-in page
+│   ├── resources-page.png    <-- SCREENSHOT: Support Resources page
+│   ├── calm-page.png         <-- SCREENSHOT: Pause & Prepare page
+│   ├── methods-page.png      <-- SCREENSHOT: Output Methods page
+│   └── login-page.png        <-- SCREENSHOT: Staff Login page
 ├── Password.txt              <-- FILE HANDLING: Credentials file for authentication
 ├── server.js                 <-- SERVER ENTRY: Express full-stack web application
 ├── wrangler.jsonc            <-- CLOUDFLARE CONFIG: Workers & static assets deployment config
@@ -78,7 +112,7 @@ safespace/
 
 ---
 
-## 3. Core Features & Technical Highlights
+## 4. Core Features & Technical Highlights
 
 | Feature | Implementation Location | Description |
 | :--- | :--- | :--- |
@@ -98,7 +132,7 @@ safespace/
 
 ---
 
-## 4. How to Run & Deploy
+## 5. How to Run & Deploy
 
 ### Option A: Live Online Deployment (Cloudflare Workers)
 Visit the deployed application directly at:  
