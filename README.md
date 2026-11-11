@@ -84,8 +84,7 @@ safespace/
 │       ├── modal.js          <-- JS MODULE: Accessible modal dialog & escape handler
 │       ├── breathing.js      <-- JS MODULE: Grounding breathing orb (async/await event loop)
 │       ├── outputMethods.js  <-- JS MODULE: The 4 required output methods implementation
-│       ├── checkin.js        <-- JS MODULE: Client-side form handler & risk categorization
-│       └── router.js         <-- JS MODULE: Client-side SPA router for standalone browser mode
+│       └── checkin.js        <-- JS MODULE: Client-side form handler & risk categorization
 ├── src/
 │   └── worker.js             <-- CLOUDFLARE WORKER: Edge router & API adapter
 ├── docs/
@@ -98,7 +97,6 @@ safespace/
 ├── server.js                 <-- SERVER ENTRY: Express full-stack web application
 ├── wrangler.jsonc            <-- CLOUDFLARE CONFIG: Workers & static assets deployment config
 ├── package.json              <-- NPM CONFIG: Dependencies & run scripts
-├── index.html                <-- STANDALONE ENTRY: Allows direct double-click browser viewing
 └── README.md                 <-- Complete project documentation
 ```
 
@@ -144,6 +142,3 @@ npx wrangler deploy
    npm start
    ```
 3. Open `http://localhost:3000` in your browser.
-
-### Option C: Direct Browser Viewing (Standalone Mode)
-Double-click `index.html` in File Explorer. The client-side router (`public/js/router.js`) displays each view and provides full interactive functionality without a running server.
