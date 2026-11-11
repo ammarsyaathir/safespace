@@ -1,0 +1,94 @@
+<!-- ==========================================================================
+     PAGE 1: HOME DASHBOARD & LIVE MALAYSIA TIMEPIECE
+     ========================================================================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">A place to start</div>
+      <h1>Everyone deserves a life that feels safe.</h1>
+      <p class="hero-copy">
+        Understand the signs of domestic violence, explore support options,
+        and take a private moment to consider what help could look like for
+        you or someone you care about across Malaysia.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="/checkin">
+          Explore support options
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+        <a class="button outline" href="/learn">Learn the signs</a>
+        <a class="button outline" href="/calm">Grounding breath</a>
+      </div>
+      <div class="hero-note">
+        <i class="fa-solid fa-sparkles" aria-hidden="true"></i>
+        <span>You can use a nickname. You do not have to share your story.</span>
+      </div>
+    </div>
+
+    <!-- Live Timepiece Card Dashboard (Live Clock Component) -->
+    <aside class="time-card" aria-label="Malaysian Standard Time Clock">
+      <div class="time-head">
+        <span>Malaysia · Live Clock</span>
+        <span class="live-pill">
+          <i class="fa-solid fa-circle" aria-hidden="true"></i> LIVE
+        </span>
+      </div>
+      <div class="time-display" aria-live="off">
+        <span id="clockHours">00</span><span>:</span><span id="clockMinutes">00</span><span class="seconds">:<span id="clockSeconds">00</span></span>
+      </div>
+      <div class="time-date" id="clockDate">Loading local date…</div>
+      <div class="time-rule"></div>
+      <div class="time-bottom">
+        <div class="time-stat">
+          <span>Time Zone</span>
+          <strong>MYT · UTC+08:00</strong>
+        </div>
+        <div class="time-stat">
+          <span>Clock Status</span>
+          <strong id="clockStatus">Synchronising</strong>
+        </div>
+      </div>
+      <div class="safe-tip">
+        <b>NOTE:</b>
+        <span>The clock uses your browser's current time formatted for Kuala Lumpur.</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- Quick Navigation Overview Cards -->
+<section class="section-space">
+  <div class="section-top">
+    <div>
+      <div class="overline">Portal Overview</div>
+      <h2>Core Portal Modules</h2>
+      <p>Navigate through the separate modules designed to provide immediate clarity, guidance, and crisis intervention.</p>
+    </div>
+  </div>
+  <div class="awareness">
+    <article class="awareness-card">
+      <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+      <h3>Understand Abuse</h3>
+      <p>Learn to recognize the multifaceted indicators of domestic violence including physical, emotional, financial, and digital abuse.</p>
+      <a href="/learn" class="button outline" style="margin-top:14px; padding:8px 12px; font-size:12px;">Explore module</a>
+    </article>
+    <article class="awareness-card">
+      <div class="icon-box"><i class="fa-solid fa-compass"></i></div>
+      <h3>Private Check-in</h3>
+      <p>Assess immediate urgency, determine suitable assistance pathways, and receive customized legal or shelter suggestions.</p>
+      <a href="/checkin" class="button outline" style="margin-top:14px; padding:8px 12px; font-size:12px;">Start check-in</a>
+    </article>
+    <article class="awareness-card">
+      <div class="icon-box"><i class="fa-solid fa-wind"></i></div>
+      <h3>Pause &amp; Prepare</h3>
+      <p>Participate in a guided 60-second breathing cycle and formulate an actionable personal safety plan when safe to do so.</p>
+      <a href="/calm" class="button outline" style="margin-top:14px; padding:8px 12px; font-size:12px;">Try grounding</a>
+    </article>
+    <article class="awareness-card">
+      <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+      <h3>Output Methods</h3>
+      <p>Inspect the laboratory demonstration of innerHTML, document.write(), window.alert(), and console logging.</p>
+      <a href="/methods" class="button outline" style="margin-top:14px; padding:8px 12px; font-size:12px;">View methods</a>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+{
+  "name": "itt588-lab3-safespace-my",
+  "version": "1.0.0",
+  "description": "SafeSpace MY - Domestic Violence Support Portal for ITT588 Lab Work 03 with separated Router, Controllers, Views, and CSS.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "author": "Muhammad Ammar Syaathir Bin Abd Rahim (2025179251)",
+  "license": "ISC"
+}

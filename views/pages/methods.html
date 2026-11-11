@@ -1,0 +1,57 @@
+<!-- ==========================================================================
+     PAGE 6: FOUR JAVASCRIPT OUTPUT METHODS DEMONSTRATION
+     ========================================================================== -->
+<section class="methods" id="methods">
+  <div class="methods-title">
+    <div>
+      <div class="overline">04 / Lab requirements</div>
+      <h3>Four JavaScript output methods</h3>
+      <p>
+        Click the buttons to test each method. Results appear directly on-screen, in a dedicated report window, or in the terminal.
+      </p>
+    </div>
+    <div class="f12">OUTPUT · VISIBLE BELOW</div>
+  </div>
+
+  <div class="method-grid">
+    <article class="method">
+      <div class="method-no">METHOD 01</div>
+      <h4>Popup result content</h4>
+      <code>innerHTML</code>
+      <p>Dynamically constructs and renders formatted check-in evaluation cards inside an accessible modal dialog.</p>
+    </article>
+
+    <article class="method">
+      <div class="method-no">METHOD 02</div>
+      <h4>Separate report window</h4>
+      <code>document.write()</code>
+      <p>Creates a clean, printable emergency support summary inside an isolated secondary browser tab.</p>
+    </article>
+
+    <article class="method">
+      <div class="method-no">METHOD 03</div>
+      <h4>Centered info popup</h4>
+      <code>window.alert()</code>
+      <p>Displays an immediate safety alert dialog using a non-intrusive, centered custom modal layer.</p>
+    </article>
+
+    <article class="method">
+      <div class="method-no">METHOD 04</div>
+      <h4>Developer console</h4>
+      <code>console.log()</code>
+      <p>Writes structured execution tables to dev tools and mirrors text into the on-page terminal below.</p>
+    </article>
+  </div>
+
+  <div class="method-buttons">
+    <button class="button dark" id="testAlert" type="button">Test browser alert (Method 3)</button>
+    <button class="button outline" id="testConsole" type="button">Test console output (Method 4)</button>
+    <button class="button outline" id="testWrite" type="button">Open sample report (Method 2)</button>
+  </div>
+
+  <!-- On-page terminal container showing real-time console mirroring -->
+  <div class="console-output" id="consoleOutput" aria-live="polite">
+    <strong>Developer console output terminal</strong>
+    <pre id="consoleOutputText"></pre>
+  </div>
+</section>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{PAGE_TITLE}}</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Separated Application Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Top Announcement Bar -->
+    <div class="topline">
+      <div class="wrap">
+        <div class="live-tag">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span>SUPPORT &amp; AWARENESS · MALAYSIA</span>
+        </div>
+        <div class="clock-mini" id="clockMini">SYNCING MALAYSIA TIME…</div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="/home">
+          <span class="brand-symbol" aria-hidden="true">
+            <i class="fa-solid fa-shield-halved"></i>
+          </span>
+          <span>
+            <b>SafeSpace MY</b>
+            <small>DOMESTIC VIOLENCE SUPPORT</small>
+          </span>
+        </a>
+
+        <!-- Routing Navigation Links -->
+        <nav class="navlinks" aria-label="Main Navigation">
+          <a href="/home" class="navlink-home">Home</a>
+          <a href="/learn" class="navlink-learn">Understand abuse</a>
+          <a href="/checkin" class="navlink-checkin">Private check-in</a>
+          <a href="/resources" class="navlink-resources">Support resources</a>
+          <a href="/calm" class="navlink-calm">Pause &amp; prepare</a>
+          <a href="/methods" class="navlink-methods">Output methods</a>
+          <a href="/login" class="navlink-login">Staff Login</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="button softrose" id="quickHelp" type="button">
+            Quick safety info
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dynamic Controller View Injected Here -->
+    <main class="wrap">
+      <!-- {{CONTENT}} -->
+    </main>
+
+    <!-- Bottom Reassurance Banner -->
+    <div class="wrap">
+      <section class="bottom-callout">
+        <div>
+          <h3>You deserve support without blame.</h3>
+          <p>Take one step at a time. Your safety, dignity, and choices matter.</p>
+        </div>
+        <button class="button" id="safetyReminder" type="button">
+          Open safety reminder
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </button>
+      </section>
+    </div>
+
+    <!-- Application Footer -->
+    <footer>
+      <div class="wrap foot">
+        <span>© 2026 SafeSpace MY · ITT588 Front-End Technology Lab 3</span>
+        <span>This is a demonstration academic portal. It is not an official emergency service.</span>
+        <span>For immediate danger, call <a href="tel:999"><b>999</b></a> · Talian Kasih: <a href="tel:15999"><b>15999</b></a></span>
+      </div>
+    </footer>
+
+    <!-- Accessible Custom PopUp Dialog (Modal) -->
+    <div
+      class="backdrop"
+      id="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-hidden="true"
+    >
+      <section class="dialog">
+        <div class="dialog-head">
+          <div>
+            <h2 id="modalTitle">Your support options</h2>
+            <p id="modalSub">A general guide based on your answers</p>
+          </div>
+          <button class="xbtn" id="closeModal" aria-label="Close popup" type="button">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="dialog-content" id="modalContent"></div>
+        <div class="dialog-actions">
+          <button class="button primary" id="makeReport" type="button">
+            Open printable summary
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </button>
+          <button class="button outline" id="doneModal" type="button">Close popup</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Separated JavaScript Modules -->
+    <script src="/js/clock.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/breathing.js"></script>
+    <script src="/js/outputMethods.js"></script>
+    <script src="/js/checkin.js"></script>
+  </body>
+</html>

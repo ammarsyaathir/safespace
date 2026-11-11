@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Cloudflare Wrangler build & local state
+.wrangler/
+
+# Lab report / binary PDFs (push source code only)
+*.pdf
+
+# Environment & local secrets
+.env
+.env.*
+!.env.example
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+npm-debug.log*

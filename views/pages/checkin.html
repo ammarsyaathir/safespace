@@ -1,0 +1,195 @@
+<!-- ==========================================================================
+     PAGE 3: PRIVATE CHECK-IN FORM & SUPPORT PREFERENCE
+     ========================================================================== -->
+<section id="checkin">
+  <div class="section-top">
+    <div>
+      <div class="overline">02 / Private check-in</div>
+      <h2>What kind of support feels right?</h2>
+      <p>
+        This is a confidential educational guide, not an official risk assessment.
+        Your answers are evaluated client-side in this browser session to protect your privacy.
+      </p>
+    </div>
+    <div class="section-number">YOUR PACE · YOUR CHOICE</div>
+  </div>
+
+  <div class="form-layout">
+    <!-- Form Panel -->
+    <section class="panel">
+      <div class="panel-head">
+        <div class="head-icon" aria-hidden="true">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <div>
+          <h3>Support check-in form</h3>
+          <p>Only answer what feels safe and comfortable to answer.</p>
+        </div>
+      </div>
+
+      <div class="panel-body">
+        <form id="supportForm" novalidate>
+          <!-- Field 1: Nickname (Text Input) -->
+          <div class="field">
+            <label for="nickname">
+              Name or nickname
+              <span style="font-weight: 500; color: #84929a;">· optional</span>
+            </label>
+            <input
+              id="nickname"
+              name="nickname"
+              type="text"
+              maxlength="60"
+              placeholder="e.g. Anonymous or initials"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- Field 2: Immediate Danger (Radio Buttons Group) -->
+          <fieldset class="field">
+            <legend>Are you in immediate danger right now? <span style="color:#d86d66;">*</span></legend>
+            <div class="choice-list">
+              <label class="choice">
+                <input type="radio" name="danger" value="yes" required />
+                <span>
+                  <strong>Yes, I may be in danger</strong>
+                  <small>My immediate safety is the urgent priority.</small>
+                </span>
+              </label>
+
+              <label class="choice">
+                <input type="radio" name="danger" value="unsure" />
+                <span>
+                  <strong>I'm unsure</strong>
+                  <small>I want to understand my options and safety measures.</small>
+                </span>
+              </label>
+
+              <label class="choice">
+                <input type="radio" name="danger" value="no" />
+                <span>
+                  <strong>No immediate danger</strong>
+                  <small>I'm looking for information, advice, or support.</small>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Field 3: Support Category (Select Dropdown) -->
+          <div class="field">
+            <label for="supportType">
+              What support are you looking for? <span style="color:#d86d66;">*</span>
+            </label>
+            <select id="supportType" name="supportType" required>
+              <option value="">Select a support area</option>
+              <option value="safety">Safety planning</option>
+              <option value="emotional">Emotional support or counselling</option>
+              <option value="legal">Legal or protection information (IPO/EPO)</option>
+              <option value="shelter">Shelter or practical support</option>
+              <option value="friend">Supporting a friend or family member</option>
+              <option value="learn">Learning more about rights</option>
+            </select>
+          </div>
+
+          <!-- Field 4: Notes (Textarea) -->
+          <div class="field">
+            <label for="notes">
+              Anything else to note?
+              <span style="font-weight: 500; color: #84929a;">· optional</span>
+            </label>
+            <textarea
+              id="notes"
+              name="notes"
+              maxlength="500"
+              placeholder="Avoid writing specific identifying details or addresses if this device may be monitored."
+            ></textarea>
+          </div>
+
+          <p class="helper">
+            If someone may monitor this device, consider switching to a safer device or private browsing mode.
+          </p>
+
+          <div class="form-actions">
+            <button class="button primary" type="submit">
+              View my support options
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </button>
+            <button class="button outline" type="button" id="clearForm">Clear form</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Hotlines & Quick Directory Aside -->
+    <aside class="panel" id="resources">
+      <div class="panel-head">
+        <div class="head-icon" aria-hidden="true">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div>
+          <h3>Support contacts</h3>
+          <p>For emergencies or to explore further assistance.</p>
+        </div>
+      </div>
+
+      <div class="resource-list">
+        <div class="resource">
+          <div class="resource-symbol" aria-hidden="true">
+            <i class="fa-solid fa-truck-medical"></i>
+          </div>
+          <div>
+            <h4>Emergency Services</h4>
+            <p>Police, ambulance, or rescue if in immediate danger.</p>
+            <a href="tel:999">
+              Call 999
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="resource">
+          <div class="resource-symbol" aria-hidden="true">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <div>
+            <h4>Talian Kasih</h4>
+            <p>24/7 National hotline under KPWKM for crisis assistance.</p>
+            <a href="tel:15999">
+              Call 15999
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="resource">
+          <div class="resource-symbol" aria-hidden="true">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <div>
+            <h4>Women's Aid Org (WAO)</h4>
+            <p>Free crisis support, shelter, and legal advice in Malaysia.</p>
+            <a href="tel:0330008858">
+              Call 03-3000 8858
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="resource">
+          <div class="resource-symbol" aria-hidden="true">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <h4>One Stop Crisis Centre (OSCC)</h4>
+            <p>Located at government hospital emergency departments across Malaysia.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-disclaimer">
+        This website is an educational demonstration portal, not an emergency dispatcher.
+        Verify contact details with official Malaysian authorities when safe.
+      </div>
+    </aside>
+  </div>
+</section>
