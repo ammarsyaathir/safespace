@@ -1,6 +1,6 @@
 # SafeSpace MY · ITT588 Lab Work 03
 
-**Live Online Deployment (Cloudflare Workers):** [https://itt588-safespace-my.aisaclub-uitmjasin.workers.dev](https://itt588-safespace-my.aisaclub-uitmjasin.workers.dev)
+**Live Online Deployment (Cloudflare Workers):** [https://itt588-safespace-my.ammarsyaathir.workers.dev](https://itt588-safespace-my.ammarsyaathir.workers.dev)
 
 **Faculty of Computer & Mathematical Sciences (FSKM), Universiti Teknologi MARA (UiTM)**  
 **Course Code:** ITT588 – Front-End Technology  
@@ -108,7 +108,7 @@ LAB 03/
 
 ### Option A: Live Online Deployment (Cloudflare Workers)
 Visit the deployed application directly at:  
-[https://itt588-safespace-my.aisaclub-uitmjasin.workers.dev](https://itt588-safespace-my.aisaclub-uitmjasin.workers.dev)
+[https://itt588-safespace-my.ammarsyaathir.workers.dev](https://itt588-safespace-my.ammarsyaathir.workers.dev)
 
 To redeploy updates to Cloudflare Workers:
 ```powershell
