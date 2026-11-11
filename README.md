@@ -1,14 +1,8 @@
-# SafeSpace MY · ITT588 Lab Work 03
+# SafeSpace MY
 
-**Live Online Deployment (Cloudflare Workers):** [https://itt588-safespace-my.ammarsyaathir.workers.dev](https://itt588-safespace-my.ammarsyaathir.workers.dev)
+**Client-Side Scripting and Dynamic Output Methods for a Domestic Violence Support Web Application in Malaysia**
 
-**Faculty of Computer & Mathematical Sciences (FSKM), Universiti Teknologi MARA (UiTM)**  
-**Course Code:** ITT588 – Front-End Technology  
-**Title:** Client-Side Scripting and Dynamic Output Methods for a Domestic Violence Support Web Application in Malaysia  
-**Student Name:** Muhammad Ammar Syaathir Bin Abd Rahim  
-**Student ID:** 2025179251  
-**Group:** CS2666B  
-**Lecturer:** Sir Shahadan Saad  
+**Live Online Deployment (Cloudflare Workers):** [https://safespace.ammarsyaathir.workers.dev](https://safespace.ammarsyaathir.workers.dev)
 
 ---
 
@@ -42,7 +36,7 @@ The main page (`/` or `/home`) combines the global master layout ([`views/layout
 This project implements a **Model-View-Controller (MVC)** web application with separated **Router**, **Controllers**, **Views**, **CSS**, **Client-Side Scripts**, and a **Cloudflare Worker** edge adapter so it runs both locally on Node.js/Express and online on Cloudflare Workers:
 
 ```text
-LAB 03/
+safespace/
 ├── config/
 │   └── routes.js             <-- ROUTER: Central Express HTTP routing table
 ├── controllers/
@@ -79,14 +73,14 @@ LAB 03/
 ├── wrangler.jsonc            <-- CLOUDFLARE CONFIG: Workers & static assets deployment config
 ├── package.json              <-- NPM CONFIG: Dependencies & run scripts
 ├── index.html                <-- STANDALONE ENTRY: Allows direct double-click browser viewing
-└── README.md                 <-- Complete documentation & lab rubric mapping
+└── README.md                 <-- Complete project documentation
 ```
 
 ---
 
-## 3. Activity & Grading Rubric Verification
+## 3. Core Features & Technical Highlights
 
-| Lab 3 Requirement | Implementation Location | Description |
+| Feature | Implementation Location | Description |
 | :--- | :--- | :--- |
 | **Separate Pages** | `views/pages/*.html` | Individual templates for Home, Learn, Check-in, Resources, Calm, Methods, and Login. |
 | **Router** | `config/routes.js` / `src/worker.js` | Express & Worker routing tables mapping HTTP paths to Controller actions (`GET`, `POST`). |
@@ -100,7 +94,7 @@ LAB 03/
 | **Output Method 4:** `console` | `public/js/outputMethods.js` | Dispatches structured `console.table()` logs to browser DevTools and mirrors onto the on-page terminal. |
 | **Date & Time Handling** | `public/js/clock.js` | Synchronizes Malaysian Standard Time (`Asia/Kuala_Lumpur`) every 1,000 ms using `Intl.DateTimeFormat`. |
 | **Event Loop & Operators** | `public/js/breathing.js` | Utilizes `async/await`, Promises, `setTimeout`, switch/case control statements, and cancellation tokens. |
-| **Password.txt Auth** | `controllers/authController.js` | Reads `Password.txt`, parses `user,pass,role`, and authenticates staff login requests. |
+| **File Auth Controller** | `controllers/authController.js` | Reads `Password.txt`, parses user records, and authenticates staff login requests. |
 
 ---
 
@@ -108,7 +102,7 @@ LAB 03/
 
 ### Option A: Live Online Deployment (Cloudflare Workers)
 Visit the deployed application directly at:  
-[https://itt588-safespace-my.ammarsyaathir.workers.dev](https://itt588-safespace-my.ammarsyaathir.workers.dev)
+[https://safespace.ammarsyaathir.workers.dev](https://safespace.ammarsyaathir.workers.dev)
 
 To redeploy updates to Cloudflare Workers:
 ```powershell
@@ -128,12 +122,3 @@ npx wrangler deploy
 
 ### Option C: Direct Browser Viewing (Standalone Mode)
 Double-click `index.html` in File Explorer. The client-side router (`public/js/router.js`) displays each view and provides full interactive functionality without a running server.
-
----
-
-## 5. Test Accounts for `Password.txt` Authentication
-
-The `/login` route authenticates credentials against `Password.txt`:
-* **Username:** `sir` | **Password:** `secret` *(Role: moderator)*
-* **Username:** `admin` | **Password:** `admin123` *(Role: administrator)*
-* **Username:** `user1` | **Password:** `user123` *(Role: user)*

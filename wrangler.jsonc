@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "itt588-safespace-my",
+  "name": "safespace",
   "main": "src/worker.js",
   "compatibility_date": "2026-11-11",
   "assets": {
