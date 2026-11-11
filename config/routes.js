@@ -10,7 +10,6 @@ const router = express.Router();
 
 const pageController = require("../controllers/pageController");
 const supportController = require("../controllers/supportController");
-const authController = require("../controllers/authController");
 
 // ==========================================
 // Page View Routes (Controller dispatch)
@@ -22,15 +21,10 @@ router.get("/checkin", pageController.getCheckin);
 router.get("/resources", pageController.getResources);
 router.get("/calm", pageController.getCalm);
 router.get("/methods", pageController.getMethods);
-router.get("/login", pageController.getLogin);
 
 // ==========================================
-// API & Authentication Action Routes
+// API Action Routes
 // ==========================================
-router.post("/login", authController.login);
-router.post("/logout", authController.logout);
-router.get("/logout", authController.logout);
-
 router.post("/api/checkin", supportController.processCheckin);
 
 module.exports = router;

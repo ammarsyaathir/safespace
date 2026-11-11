@@ -79,11 +79,4 @@ module.exports = {
       title: "JavaScript Output Methods Demonstration | SafeSpace MY",
     });
   },
-
-  // Page 7: Login Authentication Page (Password.txt)
-  getLogin: (req, res) => {
-    renderPage(res, "login", {
-      title: "Staff & Advocate Login | SafeSpace MY",
-    });
-  },
 };

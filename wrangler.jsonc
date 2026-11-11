@@ -10,7 +10,7 @@
   "rules": [
     {
       "type": "Text",
-      "globs": ["**/*.html", "**/*.txt"],
+      "globs": ["**/*.html"],
       "fallthrough": true
     }
   ]

@@ -15,7 +15,7 @@ The main page (`/` or `/home`) combines the global master layout ([`views/layout
 1. **Top Announcement Bar & Live Mini Clock (`.topline`)**  
    Displays the `SUPPORT & AWARENESS · MALAYSIA` status indicator on the left and a live Malaysian Standard Time mini clock (`#clockMini`) on the right, synchronized every 1,000 ms using `Intl.DateTimeFormat` for the `Asia/Kuala_Lumpur` timezone in [`public/js/clock.js`](public/js/clock.js).
 2. **Primary Navigation Header (`<header>`)**  
-   Features the **SafeSpace MY** brand shield, seven route links (`Home`, `Understand abuse`, `Private check-in`, `Support resources`, `Pause & prepare`, `Output methods`, and `Staff Login`) with active-tab highlighting injected by the controller, and a **Quick safety info** (`#quickHelp`) button that immediately opens an urgent safety modal with emergency numbers (`999` and `Talian Kasih 15999`) via [`public/js/modal.js`](public/js/modal.js).
+   Features the **SafeSpace MY** brand shield, six route links (`Home`, `Understand abuse`, `Private check-in`, `Support resources`, `Pause & prepare`, and `Output methods`) with active-tab highlighting injected by the controller, and a **Quick safety info** (`#quickHelp`) button that immediately opens an urgent safety modal with emergency numbers (`999` and `Talian Kasih 15999`) via [`public/js/modal.js`](public/js/modal.js).
 3. **Hero Section (`#home`)**  
    Highlights the core message (*"Everyone deserves a life that feels safe."*) alongside three primary call-to-action buttons:
    - **Explore support options** (`/checkin`) — launches the private urgency check-in form.
@@ -53,10 +53,6 @@ Features a guided 60-second **3-breath grounding orb** powered by an `async/awai
 ![Output Methods Page](docs/methods-page.png)
 Interactive showcase demonstrating the four JavaScript output delivery mechanisms: `innerHTML` modal injection, `document.write()` printable emergency summary window, `window.alert()` safety dialog, and `console.log()` / `console.table()` developer diagnostics.
 
-### Staff Portal Login (`/login`)
-![Staff Portal Login Page](docs/login-page.png)
-Provides staff/advocate login authentication validated against `Password.txt` via the `/login` and `/logout` routes.
-
 ---
 
 ## 3. Project Architecture (Separation of Concerns)
@@ -69,8 +65,7 @@ safespace/
 │   └── routes.js             <-- ROUTER: Central Express HTTP routing table
 ├── controllers/
 │   ├── pageController.js     <-- CONTROLLER: View rendering & page data dispatcher
-│   ├── supportController.js  <-- CONTROLLER: Check-in processing & risk evaluation
-│   └── authController.js     <-- CONTROLLER: Reads Password.txt & authenticates sessions
+│   └── supportController.js  <-- CONTROLLER: Check-in processing & risk evaluation
 ├── views/
 │   ├── layouts/
 │   │   └── main.html         <-- VIEW LAYOUT: Global master template (Nav, Clock, Modal, Foot)
@@ -80,8 +75,7 @@ safespace/
 │       ├── checkin.html      <-- VIEW PAGE 3: Interactive support check-in HTML form
 │       ├── resources.html    <-- VIEW PAGE 4: Emergency hotlines & support contacts
 │       ├── calm.html         <-- VIEW PAGE 5: 60-second breathing orb & safety checklist
-│       ├── methods.html      <-- VIEW PAGE 6: 4 JavaScript output methods showcase
-│       └── login.html        <-- VIEW PAGE 7: Staff login form verifying Password.txt
+│       └── methods.html      <-- VIEW PAGE 6: 4 JavaScript output methods showcase
 ├── public/
 │   ├── css/
 │   │   └── style.css         <-- CSS: Dedicated responsive design system & print styles
@@ -100,9 +94,7 @@ safespace/
 │   ├── checkin-page.png      <-- SCREENSHOT: Private Check-in page
 │   ├── resources-page.png    <-- SCREENSHOT: Support Resources page
 │   ├── calm-page.png         <-- SCREENSHOT: Pause & Prepare page
-│   ├── methods-page.png      <-- SCREENSHOT: Output Methods page
-│   └── login-page.png        <-- SCREENSHOT: Staff Login page
-├── Password.txt              <-- FILE HANDLING: Credentials file for authentication
+│   └── methods-page.png      <-- SCREENSHOT: Output Methods page
 ├── server.js                 <-- SERVER ENTRY: Express full-stack web application
 ├── wrangler.jsonc            <-- CLOUDFLARE CONFIG: Workers & static assets deployment config
 ├── package.json              <-- NPM CONFIG: Dependencies & run scripts
@@ -116,9 +108,9 @@ safespace/
 
 | Feature | Implementation Location | Description |
 | :--- | :--- | :--- |
-| **Separate Pages** | `views/pages/*.html` | Individual templates for Home, Learn, Check-in, Resources, Calm, Methods, and Login. |
+| **Separate Pages** | `views/pages/*.html` | Individual templates for Home, Learn, Check-in, Resources, Calm, and Methods. |
 | **Router** | `config/routes.js` / `src/worker.js` | Express & Worker routing tables mapping HTTP paths to Controller actions (`GET`, `POST`). |
-| **Controllers** | `controllers/*.js` | Business logic separated into `pageController`, `supportController`, and `authController`. |
+| **Controllers** | `controllers/*.js` | Business logic separated into `pageController` and `supportController`. |
 | **Separated CSS** | `public/css/style.css` | Modular CSS design tokens, grid/flexbox layouts, responsive breakpoints, and print styles. |
 | **HTML Form** | `views/pages/checkin.html` | Input validation, text fields, radio urgency selectors, category dropdowns, and textarea notes. |
 | **PopUp Dialog** | `public/js/modal.js` | Custom accessible modal layer with backdrop blur, focus management, Escape key listener, and ARIA tags. |
@@ -128,7 +120,6 @@ safespace/
 | **Output Method 4:** `console` | `public/js/outputMethods.js` | Dispatches structured `console.table()` logs to browser DevTools and mirrors onto the on-page terminal. |
 | **Date & Time Handling** | `public/js/clock.js` | Synchronizes Malaysian Standard Time (`Asia/Kuala_Lumpur`) every 1,000 ms using `Intl.DateTimeFormat`. |
 | **Event Loop & Operators** | `public/js/breathing.js` | Utilizes `async/await`, Promises, `setTimeout`, switch/case control statements, and cancellation tokens. |
-| **File Auth Controller** | `controllers/authController.js` | Reads `Password.txt`, parses user records, and authenticates staff login requests. |
 
 ---
 

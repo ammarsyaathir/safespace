@@ -58,6 +58,5 @@ Router.register("checkin", "view-checkin", "Private Check-in | SafeSpace MY");
 Router.register("resources", "view-resources", "Support Resources | SafeSpace MY");
 Router.register("calm", "view-calm", "Pause & Prepare | SafeSpace MY");
 Router.register("methods", "view-methods", "Output Methods | SafeSpace MY");
-Router.register("login", "view-login", "Staff Login | SafeSpace MY");
 
 Router.init();

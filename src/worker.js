@@ -11,8 +11,6 @@ import checkinHtml from "../views/pages/checkin.html";
 import resourcesHtml from "../views/pages/resources.html";
 import calmHtml from "../views/pages/calm.html";
 import methodsHtml from "../views/pages/methods.html";
-import loginHtml from "../views/pages/login.html";
-import passwordTxt from "../Password.txt";
 
 const PAGE_ROUTES = {
   "/": {
@@ -50,11 +48,6 @@ const PAGE_ROUTES = {
     html: methodsHtml,
     title: "JavaScript Output Methods Demonstration | SafeSpace MY",
   },
-  "/login": {
-    viewName: "login",
-    html: loginHtml,
-    title: "Staff & Advocate Login | SafeSpace MY",
-  },
 };
 
 function renderPage(viewName, pageHtml, title) {
@@ -86,51 +79,6 @@ async function parseBody(request) {
   } catch {
     return {};
   }
-}
-
-function handleLogin(body) {
-  const { username, password } = body || {};
-  if (!username || !password) {
-    return Response.json(
-      {
-        success: false,
-        message: "Please enter both username and password.",
-      },
-      { status: 400 }
-    );
-  }
-
-  const lines = String(passwordTxt)
-    .split(/\r?\n/)
-    .filter((l) => l.trim().length > 0);
-
-  let authenticated = false;
-  let matchedRole = null;
-
-  for (const line of lines) {
-    const [u, p, r] = line.split(",").map((s) => s.trim());
-    if (u === username && p === password) {
-      authenticated = true;
-      matchedRole = r || "standard";
-      break;
-    }
-  }
-
-  if (authenticated) {
-    return Response.json({
-      success: true,
-      message: `Login successful! Welcome, ${username} (${matchedRole}).`,
-      user: { username, role: matchedRole },
-    });
-  }
-
-  return Response.json(
-    {
-      success: false,
-      message: "Invalid username or password. Check Password.txt credentials.",
-    },
-    { status: 401 }
-  );
 }
 
 function handleCheckin(body) {
@@ -213,15 +161,6 @@ export default {
     if (method === "GET" && PAGE_ROUTES[pathname]) {
       const page = PAGE_ROUTES[pathname];
       return renderPage(page.viewName, page.html, page.title);
-    }
-
-    if (method === "POST" && pathname === "/login") {
-      const body = await parseBody(request);
-      return handleLogin(body);
-    }
-
-    if ((method === "POST" || method === "GET") && pathname === "/logout") {
-      return Response.json({ success: true, message: "Logged out." });
     }
 
     if (method === "POST" && pathname === "/api/checkin") {

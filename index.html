@@ -45,7 +45,6 @@
           <a href="#resources">Support resources</a>
           <a href="#calm">Pause &amp; prepare</a>
           <a href="#methods">Output methods</a>
-          <a href="#login">Staff Login</a>
         </nav>
 
         <div class="nav-actions">
@@ -467,45 +466,6 @@
             <strong>Developer console output terminal</strong>
             <pre id="consoleOutputText"></pre>
           </div>
-        </div>
-      </section>
-
-      <!-- ==========================================
-           PAGE VIEW 7: STAFF LOGIN (PASSWORD.TXT)
-           ========================================== -->
-      <section id="view-login" class="page-view" style="display:none;">
-        <div class="login-card">
-          <h2 style="margin-top:0;">Staff &amp; Advocate Login</h2>
-          <p>Authenticates against <code>Password.txt</code> as required by the lab rubric.</p>
-          <div class="auth-badge">
-            <i class="fa-solid fa-circle-info"></i>
-            <div>
-              <b>Test Accounts in Password.txt:</b><br />
-              • <code>sir</code> / <code>secret</code> (moderator)<br />
-              • <code>admin</code> / <code>admin123</code> (administrator)<br />
-              • <code>user1</code> / <code>user123</code> (user)
-            </div>
-          </div>
-          <div id="loginFeedback" style="display:none; margin-bottom:15px;" class="status"></div>
-          <div id="loggedInPanel" style="display:none; margin-bottom:15px;">
-            <div class="status safe" style="display:flex; justify-content:space-between; align-items:center;">
-              <div><b>Logged in:</b> <span id="currentUsername"></span> (<span id="currentUserRole"></span>)</div>
-              <button class="button dark" id="logoutBtn" style="padding:6px 12px; font-size:11px;" type="button">Logout</button>
-            </div>
-          </div>
-          <form id="authForm">
-            <div class="field">
-              <label for="loginUsername">Username <span style="color:#d86d66;">*</span></label>
-              <input id="loginUsername" type="text" placeholder="e.g. sir or admin" required />
-            </div>
-            <div class="field">
-              <label for="loginPassword">Password <span style="color:#d86d66;">*</span></label>
-              <input id="loginPassword" type="password" placeholder="e.g. secret or admin123" required />
-            </div>
-            <div class="form-actions" style="margin-top:20px;">
-              <button class="button primary" type="submit">Authenticate Login <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-          </form>
         </div>
       </section>
     </main>
