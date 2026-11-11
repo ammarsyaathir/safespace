@@ -600,7 +600,6 @@ main {
 }
 
 .field input[type="text"],
-.field input[type="password"],
 .field select,
 .field textarea {
   width: 100%;
@@ -1023,44 +1022,6 @@ main {
   margin: 0;
   white-space: pre-wrap;
   font: 12px/1.6 var(--font-mono);
-}
-
-/* ==========================================================================
-   Page 7: Rubric Login Page (Password.txt Authentication)
-   ========================================================================== */
-.login-card {
-  max-width: 480px;
-  margin: 40px auto;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-  padding: 32px;
-}
-
-.login-card h2 {
-  margin: 0 0 8px;
-  color: var(--navy);
-  font-size: 24px;
-}
-
-.login-card p {
-  color: var(--muted);
-  font-size: 13px;
-  margin: 0 0 24px;
-}
-
-.auth-badge {
-  background: #f0f7f5;
-  border: 1px solid #cbe4dc;
-  border-radius: 10px;
-  padding: 12px;
-  font-size: 12px;
-  color: #27625f;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 /* ==========================================================================
