@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build:pages": "node scripts/build-pages.js",
+    "deploy": "npm run build:pages && wrangler pages deploy dist --project-name safespace-my --branch main"
   },
   "dependencies": {
     "express": "^4.19.2"

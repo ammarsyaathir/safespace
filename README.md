@@ -2,7 +2,7 @@
 
 **Client-Side Scripting and Dynamic Output Methods for a Domestic Violence Support Web Application in Malaysia**
 
-**Live Online Deployment (Cloudflare Workers):** [https://safespace.ammarsyaathir.workers.dev](https://safespace.ammarsyaathir.workers.dev)
+**Live Online Deployment (Cloudflare Pages):** [https://safespace-my.pages.dev](https://safespace-my.pages.dev)
 
 ---
 
@@ -57,7 +57,7 @@ Interactive showcase demonstrating the four JavaScript output delivery mechanism
 
 ## 3. Project Architecture (Separation of Concerns)
 
-This project implements a **Model-View-Controller (MVC)** web application with separated **Router**, **Controllers**, **Views**, **CSS**, **Client-Side Scripts**, and a **Cloudflare Worker** edge adapter so it runs both locally on Node.js/Express and online on Cloudflare Workers:
+This project implements a **Model-View-Controller (MVC)** web application with separated **Router**, **Controllers**, **Views**, **CSS**, **Client-Side Scripts**, and a **Cloudflare Pages** edge adapter so it runs both locally on Node.js/Express and online on Cloudflare Pages:
 
 ```text
 safespace/
@@ -85,8 +85,10 @@ safespace/
 │       ├── breathing.js      <-- JS MODULE: Grounding breathing orb (async/await event loop)
 │       ├── outputMethods.js  <-- JS MODULE: The 4 required output methods implementation
 │       └── checkin.js        <-- JS MODULE: Client-side form handler & risk categorization
+├── scripts/
+│   └── build-pages.js        <-- BUILD SCRIPT: Bundles public/ + views/ into dist/ for Pages
 ├── src/
-│   └── worker.js             <-- CLOUDFLARE WORKER: Edge router & API adapter
+│   └── worker.js             <-- EDGE ADAPTER: Cloudflare Pages _worker.js router & API handler
 ├── docs/
 │   ├── main-page.png         <-- SCREENSHOT: Home dashboard
 │   ├── learn-page.png        <-- SCREENSHOT: Understand Abuse page
@@ -123,13 +125,13 @@ safespace/
 
 ## 5. How to Run & Deploy
 
-### Option A: Live Online Deployment (Cloudflare Workers)
+### Option A: Live Online Deployment (Cloudflare Pages)
 Visit the deployed application directly at:  
-[https://safespace.ammarsyaathir.workers.dev](https://safespace.ammarsyaathir.workers.dev)
+[https://safespace-my.pages.dev](https://safespace-my.pages.dev)
 
-To redeploy updates to Cloudflare Workers:
+To redeploy updates to Cloudflare Pages:
 ```powershell
-npx wrangler deploy
+npm run deploy
 ```
 
 ### Option B: Running Locally with Node.js & Express

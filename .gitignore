@@ -3,6 +3,7 @@ node_modules/
 
 # Cloudflare Wrangler build & local state
 .wrangler/
+dist/
 
 # Lab report / binary PDFs (push source code only)
 *.pdf
